@@ -1,6 +1,5 @@
 package az.lsim.librarymanagementsystem.controller;
 
-import az.lsim.librarymanagementsystem.dto.response.GenericResponse;
 import az.lsim.librarymanagementsystem.model.Book;
 import az.lsim.librarymanagementsystem.service.BookService;
 import lombok.RequiredArgsConstructor;
@@ -8,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -25,6 +23,7 @@ public class BookController {
         model.addAttribute("books", books);
         return "books";
     }
+
 
     @GetMapping("/new")
     public String addBook(Model model) {
